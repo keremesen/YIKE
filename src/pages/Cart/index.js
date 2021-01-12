@@ -2,15 +2,14 @@ import React, { Component } from 'react'
 import { CartContainer } from './CartElements'
 import {itemPrice, itemName} from '../ProductList/index'
 import {ButtonLink, ButtonLink2} from './CartElements'
-import {GlobalStlye} from '../../globalStyles'
 import { Col, Row,  Form, FormGroup, Label, Input } from 'reactstrap'
+import swal from 'sweetalert'
 
 
 export default class Cart extends Component {
     render() {
         return (
             <CartContainer>
-                <GlobalStlye/>
                 <h1>SATIN AL</h1>
                 <h3>{itemName} </h3>
                 <h5>{itemPrice} TL</h5>
@@ -60,7 +59,7 @@ export default class Cart extends Component {
     </Form>
                 
                 <div>
-                <ButtonLink>Satın Al</ButtonLink>
+                <ButtonLink onClick={()=> swal("Mükemmel!", "Satın Alma işlemi Başarıyla Gerçekleşti!", "success")}>Satın Al</ButtonLink>
                 <ButtonLink2 to="/products">Vazgeç</ButtonLink2>
                 </div>
                

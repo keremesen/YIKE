@@ -16,35 +16,32 @@ import Cart from "./pages/Cart";
 function App() {
   return (
     <Router>
-   
+   <GlobalStlye/>
       <Navbar/>
 
       <Switch>
+        
         <Route path="/" exact>
           <Hero />
-          <GlobalStlye/>
           <Carousel />
           <Product heading="ÜRÜNLERİMİZ" data={productData} />
         </Route>
 
         <Route path="/products">
-        
-        <GlobalStlye/>
           <Products />
-          
         </Route>
 
         <Route path="/login">
           <Login />
-          <GlobalStlye/>
         </Route>
 
         <Route path="/registry">
           <Registry />
-          <GlobalStlye/>
         </Route>
+
         <Route path="/cart">
           <Cart/>
+
         </Route>
       </Switch>
       <Footer />

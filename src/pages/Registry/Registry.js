@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import fire from "../../config/fire";
 import { ButtonLink, StyledInput, StyledLogin } from "./RegistryElements";
+import swal from 'sweetalert';
 
 export class Registry extends Component {
   constructor(props) {
@@ -18,10 +19,10 @@ export class Registry extends Component {
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
       .then((u) => {
-        alert("Kaydınız Başarıyla Alınmıştır");
+        swal("Mükemmel!", "Kaydınız Başarıyla Alınmıştır", "success");
       })
       .catch((err) => {
-        alert(err);
+        swal(`${err}`)
       });
   }
 

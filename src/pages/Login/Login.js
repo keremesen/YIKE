@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import fire from '../../config/fire';
 import Products from '../ProductList';
 import { ButtonLink, StyledInput, StyledLogin } from "./LoginElements";
+import swal from 'sweetalert';
+
+
 
 export var userEmail="";
 
@@ -24,7 +27,8 @@ export class Login extends Component {
           
 
         }).catch((err)=>{
-            alert(err)
+           swal(`${err}`)
+            
             this.setState({isLogin: false})
             
         })
@@ -71,7 +75,6 @@ export class Login extends Component {
          <ButtonLink onClick={this.login}>Giriş Yap</ButtonLink>
           <h5>Henüz Hesabınız yok mu ? </h5>
           <ButtonLink to='/registry'>Kaydol</ButtonLink>
-          <ButtonLink to='/products' onClick={this.signout}> signout</ButtonLink>
                 
         </StyledLogin>
             )

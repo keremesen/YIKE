@@ -2,22 +2,30 @@ import React, { Component } from "react";
 import { Table } from "reactstrap";
 import { ButtonLink } from "../Login/LoginElements";
 import {userEmail} from '../Login/Login'
-import {LogContainer, LoginText} from './ProductListElement'
-import {DropdownMenu,  DropdownItem, UncontrolledDropdown,  DropdownToggle,} from 'reactstrap';
-import fire from '../../config/fire'
+import { LoginText} from './ProductListElement'
+import swal from 'sweetalert';
 
 export default class ProductList extends Component {
   
-  signout(){
-    fire.auth().signOut().then((u) => {
-      userEmail=" ";
-      }).catch((err) => {
-          alert(err)
-      });
-      
-}
+  constructor(){
+    super();
+    this.state={
+      search:""
+    }
+  }
+
+  updateSearch(event){
+    this.setState({search: event.target.value.substr(0,20)})
+  }
+
 
   render() {
+    let filteredProducts = this.props.products.filter(
+      (product) => {
+        return product.name.toLowerCase().indexOf(this.state.search) !==-1
+      }
+    );
+    
     var button;
     var girdi;
     var GirisYap;
@@ -26,38 +34,42 @@ export default class ProductList extends Component {
     if (userEmail!=="") {
       button = <ButtonLink to="/cart" >Satın Al</ButtonLink>
     } else {
-      button = <ButtonLink onClick={()=>alert("ilk önce giris yapmaniz gerekmektedir")}>Satın Al</ButtonLink>
-    }
+      button = <ButtonLink onClick={()=>swal("Önce Giriş Yapmalısınız!")}>Satın Al</ButtonLink>
+    }        
     if(userEmail!==""){
-      girdi = <DropdownToggle caret  style={{backgroundColor:"green"}}>
+      girdi = <LoginText >
       Hoşgeldin! -{userEmail}
-      </DropdownToggle>
+      </LoginText>
     } else {
       GirisYap=<LoginText to="/login">Giriş Yap</LoginText>
       Kaydol=<LoginText to="/registry">Kaydol</LoginText>
     }
     
     return (
+      
       <div>
-        <LogContainer>
-        {GirisYap}
-        {Kaydol}
-          <UncontrolledDropdown >
-              {girdi}
-              <DropdownMenu right>
-                <DropdownItem>
-                  Ayarlar
-                </DropdownItem>
-                <DropdownItem>
-                 Güvenlik
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem onClick={this.signout}>
-                  Çıkış Yap
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-        </LogContainer>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <text class="navbar-brand">{girdi}</text>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+    <li class="nav-item">
+        <text class="nav-link">{GirisYap}</text>
+      </li>
+      <li class="nav-item">
+        <text class="nav-link">{Kaydol}</text>
+      </li>
+    </ul>
+    <form class="d-inline-flex p-2 bd-highlight">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+    value={this.state.search}
+    onChange={this.updateSearch.bind(this)}/>
+  </form>
+  </div>
+</nav>
         <h3>
           {this.props.title} - {this.props.currentCategory}
         </h3>
@@ -72,7 +84,7 @@ export default class ProductList extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.products.map((product) => (
+            {filteredProducts.map((product) => (
               <tr key={product.productID}>
                 <th scope="row">{product.productID}</th>
                 <td>{product.name}</td>

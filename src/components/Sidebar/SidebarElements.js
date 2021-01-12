@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaTimes } from 'react-icons/fa';
+
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -19,9 +19,6 @@ export const SidebarContainer = styled.aside`
   }
 `;
 
-export const CloseIcon = styled(FaTimes)`
-  color: #000;
-`;
 
 export const Icon = styled.div`
   position: absolute;
