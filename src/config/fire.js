@@ -2,13 +2,13 @@ import firebase from 'firebase'
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB0-mScRD8vcDtxJHqd-GY0RFxD4gOns4c",
-    authDomain: "yike-66e9a.firebaseapp.com",
-    projectId: "yike-66e9a",
-    storageBucket: "yike-66e9a.appspot.com",
-    messagingSenderId: "802554287946",
-    appId: "1:802554287946:web:52e81c7f0e92ec0d6e93b3",
-    measurementId: "G-HKNP5J002N"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_PROJECT_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
   };
 
   const fire =firebase.initializeApp(firebaseConfig);
