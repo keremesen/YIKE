@@ -4,10 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-dir_to_ignore/config
+
 # testing
 /coverage
-
+config/
 # production
 /build
 
