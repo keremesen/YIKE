@@ -1,19 +1,206 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "categories": [
+
+   {
+     "categoryID": 1,
+     "name": "Telefonlar"
+   },
+   {
+     "categoryID": 2,
+     "name": "Tabletler"
+   },
+
+   {
+     "categoryID": 3,
+     "name": "Akilli Saatler"
+   },
+   {
+     "categoryID": 4,
+     "description": "Cheeses",
+     "name": "Kulakliklar"
+   },
+   {
+     "categoryID": 5,
+     "name": "Monitorler"
+   },
+   {
+     "categoryID": 6,
+     "name": "Laptoplar"
+   },
+   {
+     "categoryID": 7,
+     "name": "Bilgisayar Bilesenleri"
+   },
+   {
+     "categoryID": 8,
+     "name": "Klavyeler"
+   }
+ ],
+
+ "products": [
+   {
+     "productID": 1,
+     "categoryID": 1,
+     "unitPrice": 9999,
+     "unitsInStock": "Var",
+     "name": "iPhone 12"
+   },
+   {
+     "productID": 2,
+     "categoryID": 1,
+     "unitPrice": 9999,
+     "unitsInStock": "Var",
+     "name": "Samsung Galaxy S10"
+   },
+   {
+     "productID": 3,
+     "categoryID": 1,
+     "unitPrice": 9999,
+     "unitsInStock": "Var",
+     "name": "iPhone X"
+   },
+   {
+     "productID": 4,
+     "categoryID": 2,
+     "unitPrice": 999,
+     "unitsInStock": "Var",
+     "name": "Samsung Galaxy Tab3"
+   },
+   {
+     "productID": 5,
+     "categoryID": 2,
+     "unitPrice": 999,
+     "unitsInStock": "Var",
+     "name": "iPad"
+   },
+   {
+     "productID": 6,
+     "categoryID": 3,
+     "unitPrice": 2222,
+     "unitsInStock": "Var",
+     "name": "Apple Watch"
+   },
+   {
+     "productID": 7,
+     "categoryID": 3,
+     "unitPrice": 2222,
+     "unitsInStock": "Var",
+     "name": "Xiaomi Mi Band 5"
+   },
+   {
+     "productID": 8,
+     "categoryID": 4,
+     "unitPrice": 333,
+     "unitsInStock": "Var",
+     "name": "JBL T500 BLUETOOTH KULAKLIK"
+   },
+   {
+     "productID": 9,
+     "categoryID": 4,
+     "unitPrice": 1111,
+     "unitsInStock": "Var",
+     "name": "AirPods"
+   },
+   {
+     "productID": 10,
+     "categoryID": 4,
+     "unitPrice": 222,
+     "unitsInStock": "Var",
+     "name": "Xiaomi Redmi Airdots"
+   },
+   {
+     "productID": 11,
+     "categoryID": 5,
+     "unitPrice": 5555,
+     "unitsInStock": "Var",
+     "name": "Asus 280HZ 1MS Monitor"
+   },
+   {
+     "productID": 12,
+     "categoryID": 5,
+     "unitPrice": 4444,
+     "unitsInStock": "Var",
+     "name": "Asus 240HZ 1MS Monitor"
+   },
+   {
+     "productID": 13,
+     "categoryID": 6,
+     "unitPrice": 6666,
+     "unitsInStock": "Var",
+     "name": "Huawei Matebook D15"
+   },
+   {
+     "productID": 14,
+     "categoryID": 6,
+     "unitPrice": 6666,
+     "unitsInStock": "Var",
+     "name": "Huawei Matebook D14"
+   },
+   {
+     "productID": 15,
+     "categoryID": 6,
+     "unitPrice": 22222,
+     "unitsInStock": "Var",
+     "name": "Apple Macbook Pro"
+   },
+   {
+     "productID": 16,
+     "categoryID": 7,
+     "unitPrice": 444,
+     "unitsInStock": "Var",
+     "name": "Kingston 8GB Ram"
+   },
+   {
+     "productID": 17,
+     "categoryID": 7,
+     "unitPrice": 333,
+     "unitsInStock": "Var",
+     "name": "Samsung 860 Evo 256GB SSD"
+   },
+   {
+     "productID": 18,
+     "categoryID": 7,
+     "unitPrice": 11111,
+     "unitsInStock": "Var",
+     "name": "NVIDIA GEFORCE RTX 3090"
+   },
+   {
+     "productID": 19,
+     "categoryID": 8,
+     "unitPrice": 888,
+     "unitsInStock": "Var",
+     "name": "Razer Blackwidow RGB Klavye"
+   },
+   {
+     "productID": 20,
+     "categoryID": 8,
+     "unitPrice": 11111,
+     "unitsInStock": "Var",
+     "name": "Apple Magic Keyboard"
+   },
+   {
+     "productID": 21,
+     "categoryID": 1,
+     "unitPrice": 2499,
+     "unitsInStock": "Var",
+     "name": "YIKE T-50 Telefon"
+   },
+   {
+     "productID": 22,
+     "categoryID": 3,
+     "unitPrice": 1499,
+     "unitsInStock": "Var",
+     "name": "YIKE Smart Watch GP4"
+   },
+   {
+     "productID": 23,
+     "categoryID": 4,
+     "unitPrice": 999,
+     "unitsInStock": "Var",
+     "name": "YIKE S-420 Quad Driver Bluuetooth Kulaklik"
+   }
+
+
+ ]
+
 }
