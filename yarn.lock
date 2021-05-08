@@ -12161,9 +12161,9 @@ xtend@^4.0.0, xtend@~4.0.1:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
-y18n@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.0.tgz"
+y18n@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-4.0.1.tgz"
   integrity sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
 
 yallist@^3.0.2:
@@ -12210,7 +12210,7 @@ yargs@^13.3.2:
     set-blocking "^2.0.0"
     string-width "^3.0.0"
     which-module "^2.0.0"
-    y18n "^4.0.0"
+    y18n "^4.0.1"
     yargs-parser "^13.1.2"
 
 yargs@^15.4.1:
@@ -12227,5 +12227,5 @@ yargs@^15.4.1:
     set-blocking "^2.0.0"
     string-width "^4.2.0"
     which-module "^2.0.0"
-    y18n "^4.0.0"
+    y18n "^4.0.1"
     yargs-parser "^18.1.2"
